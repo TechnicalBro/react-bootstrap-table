@@ -72,13 +72,12 @@ class PaginationList extends Component {
       const pageText = _sizePerPage.text || _sizePerPage;
       const pageNum = _sizePerPage.value || _sizePerPage;
       if (sizePerPage === pageNum) sizePerPageText = pageText;
-      return (
-        <li key={ pageText } role='presentation'>
-          <a role='menuitem'
+      return (<a role='menuitem'
+            key={ pageText }
             tabIndex='-1' href='#'
             data-page={ pageNum }
+            className={ "dropdown-item" }
             onClick={ this.changeSizePerPage }>{ pageText }</a>
-        </li>
       );
     });
 
@@ -106,10 +105,10 @@ class PaginationList extends Component {
           ? <div>
               <div className='col-md-6'>
                 { total }{ ' ' }
-                <span className='dropdown' style={ dropDownStyle }>
-                  <button className='btn btn-default dropdown-toggle'
+                <div className='dropup' style={ dropDownStyle }>
+                  <button className='btn btn-primary dropdown-toggle'
                     type='button' id='pageDropDown' data-toggle='dropdown'
-                    aria-expanded='true'>
+                    aria-expanded='true' aria-haspopup="true">
                     { sizePerPageText }
                     <span>
                       { ' ' }

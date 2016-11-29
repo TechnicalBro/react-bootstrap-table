@@ -13,11 +13,10 @@ class PageButton extends Component {
   }
 
   render() {
-    const classes = classSet({
+    const classes = classSet('page-item', {
       'active': this.props.active,
       'disabled': this.props.disable,
       'hidden': this.props.hidden,
-      'page-item': true
     });
     return (
       <li className={ classes }>
