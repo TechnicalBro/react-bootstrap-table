@@ -115,10 +115,10 @@ class PaginationList extends Component {
                       <span className='caret'/>
                     </span>
                   </button>
-                  <ul className='dropdown-menu' role='menu' aria-labelledby='pageDropDown'>
+                  <div className='dropdown-menu' role='menu' aria-labelledby='pageDropDown'>
                     { sizePerPageOptions }
-                  </ul>
-                </span>
+                  </div>
+                </div>
               </div>
               <div className='col-md-6'>
                 <ul className='pagination' style={ pageListStyle }>
